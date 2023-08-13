@@ -1,4 +1,5 @@
-#include "timSort.c"
+#include "tim_sort.c"
+#include "block_sort.c"
 
 int main() {
     int arr[] = {64, 34, 25, 12, 22, 11, 91};
@@ -10,9 +11,17 @@ int main() {
     }
     printf("\n");
 
-    timSort(arr, size);
+    tim_sort(arr, size);
 
-    printf("Sorted array: ");
+    printf("(Tim Sort) Sorted array: ");
+    for(int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    block_sort(arr, size);
+
+    printf("(Block Sort) Sorted array: ");
     for(int i = 0; i < size; i++) {
         printf("%d ", arr[i]);
     }
